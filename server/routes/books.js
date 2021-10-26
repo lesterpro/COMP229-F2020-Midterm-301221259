@@ -39,7 +39,7 @@ router.get('/add', (req, res, next) => {
      *****************/
 
     // jump to add book page
-     res.render('books/add', {
+     res.render('books/details', {
       title: 'Add Book'
     });
 });
