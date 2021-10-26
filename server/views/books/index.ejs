@@ -1,3 +1,11 @@
+<!----
+Class: COMP229 – Web Application Development
+File: index.ejs
+Author: YuKit Tam
+StudentID: 301221259
+WebApp Name: Mid-Term Test
+-->
+
 <% include ../partials/header.ejs %>
 
     <!-- MAIN CONTENT -->
@@ -8,7 +16,7 @@
           <!-- ------------------------ -->
           <!-- FIX THE ADD BUTTON BELOW -->
           <!-- ------------------------ -->
-          <a href="" class="btn btn-primary"><i class="fa fa-plus"></i> Add a book</a>
+          <a href="books/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add a book</a>
           <br>
           <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover">
@@ -35,12 +43,16 @@
                     <!-- ------------------------ -->
                     <!-- ADD the EDIT BUTTON HERE -->
                     <!-- ------------------------ -->
+                      <a href="/books/<%= books[count]._id %>" class="btn btn-success btn-sm">
+                      <i class="fas fa-pencil-alt"></i> Edit</a>
                   </td>
 
                   <td class="text-center">
                     <!-- ------------------------ -->
                     <!-- ADD the DELETE BUTTON HERE -->
                     <!-- ------------------------ -->
+                    <a href="/books/delete/<%= books[count]._id %>" class="btn btn-warning btn-sm">
+                      <i class="fas fa-trash-alt"></i> Delete</a>
                   </td>
                 </tr>
                 <% } %>
